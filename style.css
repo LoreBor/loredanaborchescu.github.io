@@ -1,0 +1,424 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Kaisei Decol', serif;
+    
+   
+}
+.header{
+    min-height: 100vh;
+    width:100%;
+    background-image: linear-gradient(rgba(1, 1, 14, 0.7),rgba(1, 1, 14, 0.7)),url(images/header_earth.gif);
+    background-position:center ;
+    background-size:cover ;
+    position: relative;
+    
+}
+nav{
+    display:flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 90px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+    position: relative;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: white;
+    display: block;
+    margin:auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align:right;
+    margin-right: 100px;
+    
+    
+}
+.text-box h1{
+    font-size: 62px;
+    margin-right: 100px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: white;
+    
+}
+.hero-btn{
+    display: inline;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    margin-right: 100px;
+}
+.hero-btn:hover{
+    border: 1px solid rgb(37, 33, 71);
+    background:rgb(206, 201, 201);
+    transition: 1s;
+    text-decoration: none;
+    color: #fff;
+    
+}
+nav .fa{
+    display: none;
+    
+}
+
+@media (max-width:700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: rgb(190, 201, 233);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color:rgb(250, 243, 243);
+        margin: 10px;
+        float: right;
+        font-size: 22px;
+        cursor:pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+    
+}
+/*-------About-----*/
+.about{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+h1{
+    font-size: 300px;
+    font-weight: 600;
+    
+}
+p{
+    color:black;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    
+}
+.row{
+    margin-top:5% ;
+    display: flex;
+    justify-content:space-around;
+
+}
+.career-history{
+    flex-basis: 31%;
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.career-history:hover{
+    box-shadow:0 0 20px 0px rgba(0,0,0,0.2) ;
+}
+@media(max-width: 700px)
+{
+    .row{
+       flex-direction: column;
+    
+    }
+}
+
+/*-----------projects----------*/
+.projects{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top:50px ;
+
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+    align-items: center;
+    color: rgb(3, 3, 49);
+    
+    
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    
+  }
+
+
+/*------Footer-----*/
+  .footer{
+      
+      text-align: center;
+      padding: 30px 0;
+      background-color: rgb(206, 201, 201);
+      
+
+  }
+  .footer h4{
+      margin-bottom: 25px;
+      margin-top: 20px;
+      font-weight: 600;
+  }
+  .icons .fa{
+    color: white;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+    margin-left: 30px;
+    size: 18px;
+}
+  
+.fa.fa-instagram {
+    color: transparent;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+  /*-----Top button----*/
+  
+#scrollToTopBtn {
+    background-color: rgba(150, 154, 170, 0.7);
+    border: none;
+    border-radius: 10%;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 48px;
+    width: 60px;
+   float:right;
+   margin:30px;
+  }
+/*---------Contact section------*/
+
+
+.contact-parent{
+    background: #fff;
+    display:flex;
+    margin:80px 0;
+    
+}
+.contact-child{
+    display:flex;
+    flex:1;
+    box-shadow:0px 0px 10px -2px rgba(0,0,0,0.75);
+}
+.child1{
+    background:linear-gradient(rgba(2, 1, 12, 0.7),rgba(2, 1, 12, 0.7)), url("images/contact.jpg");
+    background-size:cover;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    color:#fff;
+    padding:100px 0;
+}
+.child1 p{
+    padding-left:20%;
+    font-size:20px;
+    text-shadow:0px 0px 2px rgb(255, 255, 255);
+    text-align: left;
+    color: white;
+}
+ 
+.child1 p span{
+    font-size:16px;
+    color:white;
+}
+.child2{
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+}
+.child2 p{
+    text-align: left;
+}
+.inside-contact{
+    width:90%;
+    margin:0 auto;
+}
+ 
+.inside-contact h2{
+    
+    text-align:center;
+    margin-top:50px;
+}
+ 
+.inside-contact h3{
+    text-align:center;
+    font-size:16px;
+    color:#0085e2;
+}
+.inside-contact input, .inside-contact textarea{
+    width:100%;
+    background-color:#eee;
+    border:1px solid rgb(2, 2, 32);
+    padding:5px 10px;
+    margin-bottom:20px;
+}
+.inside-contact input[type=submit]{
+    background-color:rgb(2, 2, 39);
+    color:#fff;
+    transition:0.2s;
+    border:2px solid rgb(2, 2, 39);
+    margin:30px 0;
+}
+.inside-contact input[type=submit]:hover{
+    background-color:#fff;
+    color:rgb(2, 2, 39);
+    transition:0.2s;
+}
+@media screen and (max-width:700px){
+    .contact-parent{
+        display:block;
+        width:100%;
+    }
+ 
+    .child1{
+        display:none;
+    }
+ 
+    .child2{
+        background-image:linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)), url("images/Digital\ technology01.jpg");
+        background-size:cover;
+    }
+ 
+    .inside-contact input, .inside-contact textarea{
+        background-color:#fff;
+    }
+}
+.footer_bottom{
+    text-align: center;
+    padding: 5px;
+    background-color: rgb(2, 2, 32);
+    color: white;
+    font-size: 12px;
+    position:absolute;
+    width: 100%;
+    height: 100px;
+  
+
+}
+.footer_bottom p{
+    color: white;
+    border: black;
+    text-align: center;
+    font-size: 12px;
+}
+
+
+ 
+
+/*-----Language programes-----*/
+.language {
+    
+    display: flex;
+    justify-content:space-around;
+}
+.language1{
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.5s;
+    margin-bottom: 5%;
+    
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .language1:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  .language2{
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.5s;
+    margin-bottom: 5%;
+    
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .language2:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  .language3{
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.5s;
+    margin-bottom: 5%;
+    
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .language3:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  @media (max-width: 700px)  {
+      .language{
+          flex-direction: column;
+      }
+  }
+ 
